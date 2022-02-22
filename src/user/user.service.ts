@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { use } from 'passport';
 import { Repository } from 'typeorm';
 import { CreateUserDto } from './models/dtos/create.dto';
 import { UpdateDto } from './models/dtos/login.dto';
@@ -21,7 +22,8 @@ export class UserService {
     const newUser = new UserEntity();
     newUser.email = user.email;
     newUser.password = await newUser.hashPass(user.password);
-    return this.userRepo.save(newUser);
+    const crUser = this.userRepo.create(newUser);
+    return this.userRepo.save(crUser);
   }
 
   async findOne(email: string) {

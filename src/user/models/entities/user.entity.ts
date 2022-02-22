@@ -5,7 +5,6 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { v4 as uuid } from 'uuid';
 import * as bcrypt from 'bcrypt';
 import { Role } from '../dtos/roles.enum';
 import { HintQuestionEntity } from 'src/hint-question/entities/hint.question.entity';

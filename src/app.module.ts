@@ -25,7 +25,7 @@ import { QuestionDetailsModule } from './question-details/question-details.modul
       host: 'localhost',
       username: 'root',
       password: '',
-      database: 'test',
+      database: 'cvmaker',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       // synchronize: true,
     }),

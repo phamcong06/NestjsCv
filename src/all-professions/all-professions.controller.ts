@@ -1,4 +1,12 @@
-import { Body, Controller, Delete, Param, Post, Put, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Param,
+  Post,
+  Put,
+  UseGuards,
+} from '@nestjs/common';
 import { AllProfessionsService } from './all-professions.service';
 import { ApiBearerAuth, ApiCreatedResponse } from '@nestjs/swagger';
 import { CreateAllProfessionsDTO } from './dto/create.all.professions.dto';
